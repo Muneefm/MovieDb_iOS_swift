@@ -14,6 +14,14 @@
 		F2A86ACD1C15E9F500DCDEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A86ACB1C15E9F500DCDEBC /* LaunchScreen.storyboard */; };
 		F2A86AD81C15E9F500DCDEBC /* Movie_DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A86AD71C15E9F500DCDEBC /* Movie_DBTests.swift */; };
 		F2A86AE31C15E9F500DCDEBC /* Movie_DBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A86AE21C15E9F500DCDEBC /* Movie_DBUITests.swift */; };
+		F2A86AF21C15EAFA00DCDEBC /* TabedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A86AF11C15EAFA00DCDEBC /* TabedViewController.swift */; };
+		F2A86AF51C15EBDF00DCDEBC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A86AF41C15EBDF00DCDEBC /* Utils.swift */; };
+		F2A86B0F1C15F5C500DCDEBC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A86B021C15F58500DCDEBC /* Alamofire.framework */; };
+		F2A86B101C15F5C500DCDEBC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F2A86B021C15F58500DCDEBC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2BDB1B31C17743800C3E667 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BDB1B21C17743800C3E667 /* SwiftyJSON.swift */; };
+		F2BDB1BC1C1777CF00C3E667 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BDB1BB1C1777CF00C3E667 /* MovieTableViewCell.swift */; };
+		F2DDE7D41C160557009F3891 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DDE7D31C160557009F3891 /* MovieViewController.swift */; };
+		F2DDE7D61C1605F9009F3891 /* SeriesViewTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DDE7D51C1605F9009F3891 /* SeriesViewTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +39,77 @@
 			remoteGlobalIDString = F2A86ABE1C15E9F500DCDEBC;
 			remoteInfo = "Movie DB";
 		};
+		F2A86B011C15F58500DCDEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		F2A86B031C15F58500DCDEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		F2A86B051C15F58500DCDEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		F2A86B071C15F58500DCDEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		F2A86B091C15F58500DCDEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		F2A86B0B1C15F58500DCDEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		F2A86B0D1C15F58500DCDEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		F2A86B111C15F5C500DCDEBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2A86B131C15F5C500DCDEBC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F2A86B101C15F5C500DCDEBC /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F2A86ABF1C15E9F500DCDEBC /* Movie DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie DB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +125,13 @@
 		F2A86ADE1C15E9F500DCDEBC /* Movie DBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie DBUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A86AE21C15E9F500DCDEBC /* Movie_DBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_DBUITests.swift; sourceTree = "<group>"; };
 		F2A86AE41C15E9F500DCDEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2A86AF11C15EAFA00DCDEBC /* TabedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabedViewController.swift; sourceTree = "<group>"; };
+		F2A86AF41C15EBDF00DCDEBC /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../../../../Volumes/MUN DB/Development Tools/ios libs/Alamofire-master 2/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		F2BDB1B21C17743800C3E667 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		F2BDB1BB1C1777CF00C3E667 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		F2DDE7D31C160557009F3891 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		F2DDE7D51C1605F9009F3891 /* SeriesViewTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesViewTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A86B0F1C15F5C500DCDEBC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,9 +183,14 @@
 		F2A86AC11C15E9F500DCDEBC /* Movie DB */ = {
 			isa = PBXGroup;
 			children = (
+				F2BDB1BA1C17775C00C3E667 /* cells */,
+				F2A86AF61C15F55400DCDEBC /* Frameworks */,
+				F2A86AF31C15EBC200DCDEBC /* Tools */,
+				F2A86AF01C15EAC800DCDEBC /* ViewController */,
 				F2A86AC21C15E9F500DCDEBC /* AppDelegate.swift */,
 				F2A86AC41C15E9F500DCDEBC /* ViewController.swift */,
 				F2A86AC61C15E9F500DCDEBC /* Main.storyboard */,
+				F2BDB1B21C17743800C3E667 /* SwiftyJSON.swift */,
 				F2A86AC91C15E9F500DCDEBC /* Assets.xcassets */,
 				F2A86ACB1C15E9F500DCDEBC /* LaunchScreen.storyboard */,
 				F2A86ACE1C15E9F500DCDEBC /* Info.plist */,
@@ -125,6 +216,54 @@
 			path = "Movie DBUITests";
 			sourceTree = "<group>";
 		};
+		F2A86AF01C15EAC800DCDEBC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F2A86AF11C15EAFA00DCDEBC /* TabedViewController.swift */,
+				F2DDE7D31C160557009F3891 /* MovieViewController.swift */,
+				F2DDE7D51C1605F9009F3891 /* SeriesViewTab.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		F2A86AF31C15EBC200DCDEBC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F2A86AF41C15EBDF00DCDEBC /* Utils.swift */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		F2A86AF61C15F55400DCDEBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2A86AF81C15F58500DCDEBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2A86B021C15F58500DCDEBC /* Alamofire.framework */,
+				F2A86B041C15F58500DCDEBC /* Alamofire iOS Tests.xctest */,
+				F2A86B061C15F58500DCDEBC /* Alamofire.framework */,
+				F2A86B081C15F58500DCDEBC /* Alamofire OSX Tests.xctest */,
+				F2A86B0A1C15F58500DCDEBC /* Alamofire.framework */,
+				F2A86B0C1C15F58500DCDEBC /* Alamofire tvOS Tests.xctest */,
+				F2A86B0E1C15F58500DCDEBC /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2BDB1BA1C17775C00C3E667 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				F2BDB1BB1C1777CF00C3E667 /* MovieTableViewCell.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +274,12 @@
 				F2A86ABB1C15E9F500DCDEBC /* Sources */,
 				F2A86ABC1C15E9F500DCDEBC /* Frameworks */,
 				F2A86ABD1C15E9F500DCDEBC /* Resources */,
+				F2A86B131C15F5C500DCDEBC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F2A86B121C15F5C500DCDEBC /* PBXTargetDependency */,
 			);
 			name = "Movie DB";
 			productName = "Movie DB";
@@ -215,6 +356,12 @@
 			mainGroup = F2A86AB61C15E9F500DCDEBC;
 			productRefGroup = F2A86AC01C15E9F500DCDEBC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F2A86AF81C15F58500DCDEBC /* Products */;
+					ProjectRef = F2A86AF71C15F58500DCDEBC /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F2A86ABE1C15E9F500DCDEBC /* Movie DB */,
@@ -223,6 +370,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F2A86B021C15F58500DCDEBC /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = F2A86B011C15F58500DCDEBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A86B041C15F58500DCDEBC /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = F2A86B031C15F58500DCDEBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A86B061C15F58500DCDEBC /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = F2A86B051C15F58500DCDEBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A86B081C15F58500DCDEBC /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = F2A86B071C15F58500DCDEBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A86B0A1C15F58500DCDEBC /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = F2A86B091C15F58500DCDEBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A86B0C1C15F58500DCDEBC /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = F2A86B0B1C15F58500DCDEBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A86B0E1C15F58500DCDEBC /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = F2A86B0D1C15F58500DCDEBC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F2A86ABD1C15E9F500DCDEBC /* Resources */ = {
@@ -257,7 +456,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A86AC51C15E9F500DCDEBC /* ViewController.swift in Sources */,
+				F2DDE7D41C160557009F3891 /* MovieViewController.swift in Sources */,
+				F2A86AF21C15EAFA00DCDEBC /* TabedViewController.swift in Sources */,
 				F2A86AC31C15E9F500DCDEBC /* AppDelegate.swift in Sources */,
+				F2A86AF51C15EBDF00DCDEBC /* Utils.swift in Sources */,
+				F2BDB1B31C17743800C3E667 /* SwiftyJSON.swift in Sources */,
+				F2BDB1BC1C1777CF00C3E667 /* MovieTableViewCell.swift in Sources */,
+				F2DDE7D61C1605F9009F3891 /* SeriesViewTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +494,11 @@
 			isa = PBXTargetDependency;
 			target = F2A86ABE1C15E9F500DCDEBC /* Movie DB */;
 			targetProxy = F2A86ADF1C15E9F500DCDEBC /* PBXContainerItemProxy */;
+		};
+		F2A86B121C15F5C500DCDEBC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = F2A86B111C15F5C500DCDEBC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -399,7 +609,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Movie DB/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mnf.Movie-DB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,7 +622,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Movie DB/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mnf.Movie-DB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +698,7 @@
 				F2A86AE91C15E9F500DCDEBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2A86AEA1C15E9F500DCDEBC /* Build configuration list for PBXNativeTarget "Movie DBTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +707,7 @@
 				F2A86AEC1C15E9F500DCDEBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2A86AED1C15E9F500DCDEBC /* Build configuration list for PBXNativeTarget "Movie DBUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +716,7 @@
 				F2A86AEF1C15E9F500DCDEBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
