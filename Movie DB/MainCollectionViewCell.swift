@@ -27,6 +27,7 @@ class MainCollectionViewCell: UICollectionViewCell {
             print(URL)
             self.posterImage.hnk_setImageFromURL(URL)
             
+            
         }
     }
     
