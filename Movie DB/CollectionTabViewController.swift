@@ -17,8 +17,13 @@ class CollectionTabViewController: UIViewController,UICollectionViewDelegate,UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+            print("inside view didload third tab")
+        makeNetworkRequest()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        print("inside view did appear third tab")
     }
     
     var mDataCollection:[JSON]? = []
@@ -31,7 +36,7 @@ class CollectionTabViewController: UIViewController,UICollectionViewDelegate,UIC
     
     func makeNetworkRequest(){
         let urlReq = util.getSeriesUrl("popular")
-        
+        print("")
         Alamofire.request(.GET, urlReq)
             .validate()
             .responseJSON { response in
@@ -77,7 +82,11 @@ class CollectionTabViewController: UIViewController,UICollectionViewDelegate,UIC
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("colectionIdent", forIndexPath: indexPath) as! MainCollectionViewCell
         cell.mData = mDataCollection![indexPath.row]
-        return cell
+       cell.layer.borderColor = UIColor.lightGrayColor().CGColor
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 4
+
+return cell
     }
     
 

@@ -11,12 +11,22 @@ import UIKit
 class MainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var nameTitle:UILabel!
-    
+    @IBOutlet var posterImage:UIImageView!
+
     
     
     var mData:JSON?{
         didSet{
             print("inside did set of cell data")
+            self.nameTitle.text = mData?["name"].string
+            
+            let util  = Utils()
+            let posterUrl = util.IMAGE_BASE_URL+(self.mData?["poster_path"].string)!
+            let URL = NSURL(string: posterUrl)!
+            print("image url got is = "+posterUrl)
+            print(URL)
+            self.posterImage.hnk_setImageFromURL(URL)
+            
         }
     }
     

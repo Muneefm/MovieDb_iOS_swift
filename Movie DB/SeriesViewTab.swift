@@ -12,21 +12,47 @@ import Alamofire
 
 class SeriesViewTab:UIViewController, UITableViewDataSource{
     
+    var seriesData:[JSON]?=[]
+
+    @IBAction func segmentControllMovie(sender: UISegmentedControl) {
+        seriesData = []
+        seriesTabelView.reloadData()
+        switch sender.selectedSegmentIndex {
+        case 0:
+            print("case 0")
+            makeNetworkRequest(util.getMovie("top_rated"))
+            break
+        case 1:
+            print("case 1")
+            makeNetworkRequest(util.getMovie("popular"))
+            break
+        case 2:
+            print("case 2")
+            makeNetworkRequest(util.getMovie("now_playing"))
+            break
+        case 3:
+            print("case 3")
+            makeNetworkRequest(util.getMovie("upcoming"))
+            break
+        default:
+            break
+            
+        }
+    }
     let util = Utils()
     @IBOutlet var seriesTabelView:UITableView!
-    var seriesData:[JSON]?=[]
     
     
     override func viewDidLoad() {
-        makeNetworkRequest()
+        makeNetworkRequest(util.getMovie("top_rated"))
     }
     
     override func viewDidAppear(animated: Bool) {
         
     }
     
-    func makeNetworkRequest(){
-        let urlSeriesPopular = util.getSeriesUrl("popular")
+    func makeNetworkRequest(url:String){
+        let urlSeriesPopular = url//util.getMovie("top_rated")
         Alamofire.request(.GET, urlSeriesPopular)
             .validate()
             .responseJSON { response in
