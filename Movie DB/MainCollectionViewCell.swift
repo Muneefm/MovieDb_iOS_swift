@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainCollectionViewCell: UICollectionViewCell {
     
@@ -25,7 +26,8 @@ class MainCollectionViewCell: UICollectionViewCell {
             let URL = NSURL(string: posterUrl)!
             print("image url got is = "+posterUrl)
             print(URL)
-            self.posterImage.hnk_setImageFromURL(URL)
+            
+            self.posterImage.kf_setImageWithURL(URL, placeholderImage: nil)
             
             
         }

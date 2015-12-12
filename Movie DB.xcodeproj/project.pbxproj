@@ -12,6 +12,8 @@
 		F22BDA5E1C18538A00E9B1BE /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22BDA581C18536900E9B1BE /* Haneke.framework */; };
 		F22BDA5F1C18538A00E9B1BE /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F22BDA581C18536900E9B1BE /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F267EF591C1A04B20074B83C /* SeriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267EF581C1A04B20074B83C /* SeriesTableViewCell.swift */; };
+		F29C51E41C1CA348008FC579 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C51E31C1CA348008FC579 /* SearchViewController.swift */; };
+		F29C51F21C1CA370008FC579 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29C51F11C1CA370008FC579 /* SearchTableViewCell.swift */; };
 		F2A86AC31C15E9F500DCDEBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A86AC21C15E9F500DCDEBC /* AppDelegate.swift */; };
 		F2A86AC51C15E9F500DCDEBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A86AC41C15E9F500DCDEBC /* ViewController.swift */; };
 		F2A86AC81C15E9F500DCDEBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A86AC61C15E9F500DCDEBC /* Main.storyboard */; };
@@ -196,6 +198,8 @@
 		F223D1C41C18B3CE0078DF29 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
 		F22BDA511C18536800E9B1BE /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Haneke.xcodeproj; path = "../../../../../../Volumes/MUN DB/Development Tools/ios libs/HanekeSwift-master/Haneke.xcodeproj"; sourceTree = "<group>"; };
 		F267EF581C1A04B20074B83C /* SeriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesTableViewCell.swift; sourceTree = "<group>"; };
+		F29C51E31C1CA348008FC579 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F29C51F11C1CA370008FC579 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		F2A86ABF1C15E9F500DCDEBC /* Movie DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie DB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A86AC21C15E9F500DCDEBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2A86AC41C15E9F500DCDEBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +328,7 @@
 				F2DDE7D31C160557009F3891 /* MovieViewController.swift */,
 				F2DDE7D51C1605F9009F3891 /* SeriesViewTab.swift */,
 				F2BD47F11C1ACDCE0020576D /* CollectionTabViewController.swift */,
+				F29C51E31C1CA348008FC579 /* SearchViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				F2BDB1BB1C1777CF00C3E667 /* MovieTableViewCell.swift */,
 				F267EF581C1A04B20074B83C /* SeriesTableViewCell.swift */,
 				F2BD47EF1C1ACCEB0020576D /* MainCollectionViewCell.swift */,
+				F29C51F11C1CA370008FC579 /* SearchTableViewCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -647,10 +653,12 @@
 				F2A86AF51C15EBDF00DCDEBC /* Utils.swift in Sources */,
 				F2BD47F01C1ACCEB0020576D /* MainCollectionViewCell.swift in Sources */,
 				F2BDB1B31C17743800C3E667 /* SwiftyJSON.swift in Sources */,
+				F29C51E41C1CA348008FC579 /* SearchViewController.swift in Sources */,
 				F223D1C51C18B3CE0078DF29 /* FloatRatingView.swift in Sources */,
 				F2BDB1BC1C1777CF00C3E667 /* MovieTableViewCell.swift in Sources */,
 				F2BD47F21C1ACDCE0020576D /* CollectionTabViewController.swift in Sources */,
 				F2DDE7D61C1605F9009F3891 /* SeriesViewTab.swift in Sources */,
+				F29C51F21C1CA370008FC579 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

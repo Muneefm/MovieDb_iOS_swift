@@ -49,7 +49,8 @@ class SeriesTableViewCell: UITableViewCell,FloatRatingViewDelegate {
             let URL = NSURL(string: posterUrl)!
             print("image url got is = "+posterUrl)
             print(URL)
-            self.posterImage.kf_setImageWithURL(URL,placeholderImage: nil)
+            let imageP = UIImage(named: "movie_set")
+            self.posterImage.kf_setImageWithURL(URL,placeholderImage: imageP)
         }
     }
     
