@@ -24,9 +24,17 @@ class SearchViewController: UIViewController,UITableViewDataSource,UITableViewDe
         super.viewDidLoad()
 
         self.searchBar.delegate = self
-        //self.searchTable.delegate = self
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    searchTable.keyboardDismissMode = UIScrollViewKeyboardDismissMode.OnDrag
+        self.searchTable.delegate = self
         // Do any additional setup after loading the view.
     }
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -38,6 +46,15 @@ class SearchViewController: UIViewController,UITableViewDataSource,UITableViewDe
         return searchData.count ?? 0
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+         self.view.endEditing(true)
+        searchBar.resignFirstResponder()
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+        searchBar.resignFirstResponder()
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("searchCellIdent") as! SearchTableViewCell
@@ -86,7 +103,7 @@ class SearchViewController: UIViewController,UITableViewDataSource,UITableViewDe
         }
         
         print("alamo url = "+baseUrl)
-        
+         baseUrl = baseUrl.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         Alamofire.request(.GET, baseUrl)
             .validate()
             .responseJSON { response in
