@@ -38,6 +38,7 @@ class SearchTableViewCell: UITableViewCell {
             titleName.text = self.movieDataJson?["title"].string
                 
             if self.movieDataJson?["poster_path"].string != nil{
+                
                 var posterUrl = util.IMAGE_BASE_URL+((self.movieDataJson?["poster_path"].string))!
                 let URL = NSURL(string: posterUrl)!
                 self.imagePoster.kf_setImageWithURL(URL,placeholderImage: nil)
