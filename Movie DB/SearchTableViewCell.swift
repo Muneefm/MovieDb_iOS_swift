@@ -63,8 +63,8 @@ class SearchTableViewCell: UITableViewCell {
             if self.seriesDataJson?["name"].string != nil {
             titleName.text = self.seriesDataJson?["name"].string
             }
-            if self.movieDataJson?["poster_path"].string != nil {
-            let posterUrl = util.IMAGE_BASE_URL+(self.movieDataJson?["poster_path"].string)!
+            if self.seriesDataJson?["poster_path"].string != nil {
+            let posterUrl = util.IMAGE_BASE_URL+(self.seriesDataJson?["poster_path"].string)!
             let URL = NSURL(string: posterUrl)!
             self.imagePoster.kf_setImageWithURL(URL,placeholderImage: nil)
             }
@@ -74,8 +74,22 @@ class SearchTableViewCell: UITableViewCell {
 
     var castDataJson:JSON?{
         didSet{
+            self.imagePoster.image = nil
             print("searchTable cast movie did set data")
-
+            if self.castDataJson?["name"].string != nil {
+                self.titleName.text = self.castDataJson!["name"].string
+                
+            }
+            if self.castDataJson!["poster_path"].string != nil {
+                print("person url of the poster path is ")
+                print(self.castDataJson!["poster_path"].string)
+                var posterUrl = util.IMAGE_BASE_URL+((self.castDataJson?["poster_path"].string))!
+                let URL = NSURL(string: posterUrl)!
+                self.imagePoster.kf_setImageWithURL(URL,placeholderImage: nil)
+            }
+            
+            
+            
         }
     }
     

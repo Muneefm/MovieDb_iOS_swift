@@ -13,7 +13,7 @@ class SearchViewController: UIViewController,UITableViewDataSource,UITableViewDe
 
     @IBOutlet var searchTable:UITableView!
     @IBOutlet var searchBar:UISearchBar!
-    
+    @IBOutlet var navTabBar:UISegmentedControl!
     var searchData:[JSON] = []
     var scopInt:Int! = 0
     let utils = Utils()
@@ -69,7 +69,6 @@ class SearchViewController: UIViewController,UITableViewDataSource,UITableViewDe
             
         }else if self.scopInt == 2{
             print("table cell call 2 ")
-
             cell.castDataJson = self.searchData[indexPath.row]
         }
         return cell
@@ -99,7 +98,7 @@ class SearchViewController: UIViewController,UITableViewDataSource,UITableViewDe
         }else if self.scopInt == 1{
             baseUrl = baseUrl+"search/tv?api_key="+utils.API_KEY+"&query="+query
         }else if self.scopInt == 2{
-            baseUrl = baseUrl+"search/movie?api_key="+utils.API_KEY+"&query="+query
+            baseUrl = baseUrl+"search/person?api_key="+utils.API_KEY+"&query="+query
         }
         
         print("alamo url = "+baseUrl)

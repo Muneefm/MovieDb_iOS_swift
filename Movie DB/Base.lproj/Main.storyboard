@@ -39,6 +39,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhw-4p-d5s">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <color key="tintColor" red="0.0" green="0.58823529411764708" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textShadowColor" white="1" alpha="0.71753589527027029" colorSpace="calibratedWhite"/>
@@ -108,8 +109,8 @@
                                                         <userDefinedRuntimeAttribute type="size" keyPath="minImageSize">
                                                             <size key="value" width="8" height="8"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="78C68B84-EF11-45FC-B394-B90C4433A432"/>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="05C9F20A-E2DE-4AC9-BF30-B3805DAA390B"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="F4C89ACA-BC12-42CC-A70C-2018E359442F"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="3BB87483-D189-437F-9BE1-808C4D4942F2"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V5p-tz-wFl">
@@ -554,7 +555,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="05C9F20A-E2DE-4AC9-BF30-B3805DAA390B" width="22" height="22">
+        <image name="3BB87483-D189-437F-9BE1-808C4D4942F2" width="22" height="22">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -637,7 +638,7 @@ AKsArQCyALUAtwC5ALsAvQDCANkA2wDdEQ8RFBEfESgROxE/EUoRUxFYEWARYxFoEXcRexGCEYoRlxGc
 EZ4RoBGlEa0RsBG1Eb0RwBHSEdUR2gAAAAAAAAIBAAAAAAAAAEEAAAAAAAAAAAAAAAAAABHcA
 </mutableData>
         </image>
-        <image name="78C68B84-EF11-45FC-B394-B90C4433A432" width="22" height="22">
+        <image name="F4C89ACA-BC12-42CC-A70C-2018E359442F" width="22" height="22">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
