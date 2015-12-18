@@ -53,6 +53,7 @@ class SearchTableViewCell: UITableViewCell {
     
     
     
+    
     var seriesDataJson:JSON?{
         didSet{
             self.imagePoster.image = nil

@@ -33,6 +33,7 @@
 		F2BDB1BC1C1777CF00C3E667 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BDB1BB1C1777CF00C3E667 /* MovieTableViewCell.swift */; };
 		F2DDE7D41C160557009F3891 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DDE7D31C160557009F3891 /* MovieViewController.swift */; };
 		F2DDE7D61C1605F9009F3891 /* SeriesViewTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DDE7D51C1605F9009F3891 /* SeriesViewTab.swift */; };
+		F2F1BBFE1C2491B800023AC6 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F1BBFD1C2491B800023AC6 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +224,7 @@
 		F2BDB1BB1C1777CF00C3E667 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		F2DDE7D31C160557009F3891 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		F2DDE7D51C1605F9009F3891 /* SeriesViewTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesViewTab.swift; sourceTree = "<group>"; };
+		F2F1BBFD1C2491B800023AC6 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +331,7 @@
 				F2DDE7D51C1605F9009F3891 /* SeriesViewTab.swift */,
 				F2BD47F11C1ACDCE0020576D /* CollectionTabViewController.swift */,
 				F29C51E31C1CA348008FC579 /* SearchViewController.swift */,
+				F2F1BBFD1C2491B800023AC6 /* MovieDetailViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2A86AC51C15E9F500DCDEBC /* ViewController.swift in Sources */,
+				F2F1BBFE1C2491B800023AC6 /* MovieDetailViewController.swift in Sources */,
 				F2DDE7D41C160557009F3891 /* MovieViewController.swift in Sources */,
 				F267EF591C1A04B20074B83C /* SeriesTableViewCell.swift in Sources */,
 				F2A86AF21C15EAFA00DCDEBC /* TabedViewController.swift in Sources */,

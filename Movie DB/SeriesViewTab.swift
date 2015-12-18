@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 
-class SeriesViewTab:UIViewController, UITableViewDataSource{
+class SeriesViewTab:UIViewController, UITableViewDataSource,UITableViewDelegate{
     
     var seriesData:[JSON]?=[]
 
@@ -43,10 +43,18 @@ class SeriesViewTab:UIViewController, UITableViewDataSource{
     @IBOutlet var seriesTabelView:UITableView!
     
     
+    
     override func viewDidLoad() {
         makeNetworkRequest(util.getMovie("top_rated"))
+        self.seriesTabelView.delegate = self
     }
-    
+  
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("table item click  path  = ")
+        print(indexPath)
+        let tabedViewController  = self.storyboard?.instantiateViewControllerWithIdentifier("movieDetId") as? MovieDetailViewController
+        self.presentViewController(tabedViewController!, animated: true, completion:nil)
+    }
     override func viewDidAppear(animated: Bool) {
         
     }
@@ -76,6 +84,8 @@ class SeriesViewTab:UIViewController, UITableViewDataSource{
 
         
     }
+    
+    
     
     
     
