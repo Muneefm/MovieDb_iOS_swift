@@ -12,19 +12,27 @@ import Kingfisher
 class MovieDetailViewController: UIViewController {
 
     @IBOutlet var backDropImage:UIImageView!
+    @IBOutlet var posterImage:UIImageView!
+
+    var mId:String = ""
     let util = Utils()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("inside movie detail view controller")
         self.makeMovieDetailNetworkRequest()
+        posterImage.layer.shadowColor = UIColor.blackColor().CGColor
+        posterImage.layer.shadowOffset = CGSizeMake(10, 10)
+        posterImage.layer.shadowRadius = 10
+        posterImage.layer.shadowOpacity = 1.0
+        print("recied id = "+mId)
         // Do any additional setup after loading the view.
     }
     
     var movieDetData:JSON?
     
     func makeMovieDetailNetworkRequest(){
-    var urlmDet = util.getMovie("140607")
+    var urlmDet = util.getMovie(mId)
         Alamofire.request(.GET, urlmDet)
             .validate()
             .responseJSON { response in
@@ -36,6 +44,10 @@ class MovieDetailViewController: UIViewController {
                         if json["backdrop_path"] != nil {
                         self.loadImage(self.backDropImage, imageID: json["backdrop_path"].string!)
                         print(json["backdrop_path"].string)
+                        }
+                        
+                        if json["poster_path"] != nil && json["poster_path"].string != "" {
+                      self.loadImage(self.posterImage, imageID: json["poster_path"].string!)
                         }
                     
                     }
@@ -54,8 +66,9 @@ class MovieDetailViewController: UIViewController {
         print("image url got is = "+posterUrl)
         print(URL)
         let imageP = UIImage(named: "movie_set")
+        imageView.contentMode = .ScaleAspectFill
         imageView.kf_setImageWithURL(URL,placeholderImage: imageP)
-
+        
     }
 
     

@@ -9,11 +9,12 @@
 import Foundation
 import UIKit
 import Alamofire
-
+let OffsetSpeedTwo:CGFloat = 8.0
 class SeriesViewTab:UIViewController, UITableViewDataSource,UITableViewDelegate{
     
     var seriesData:[JSON]?=[]
-
+    let imageHeight:CGFloat = 150.0
+    
     @IBAction func segmentControllMovie(sender: UISegmentedControl) {
         seriesData = []
         seriesTabelView.reloadData()
@@ -52,7 +53,14 @@ class SeriesViewTab:UIViewController, UITableViewDataSource,UITableViewDelegate{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("table item click  path  = ")
         print(indexPath)
-        let tabedViewController  = self.storyboard?.instantiateViewControllerWithIdentifier("movieDetId") as? MovieDetailViewController
+        var tabedViewController  = self.storyboard?.instantiateViewControllerWithIdentifier("movieDetId") as? MovieDetailViewController
+        var jsValue:JSON?
+        jsValue = self.seriesData?[indexPath.row]
+        if jsValue!["id"] != nil {
+            var id = jsValue!["id"]
+      tabedViewController?.mId = String(id)
+            print(jsValue?["id"])
+        }
         self.presentViewController(tabedViewController!, animated: true, completion:nil)
     }
     override func viewDidAppear(animated: Bool) {
@@ -100,5 +108,16 @@ class SeriesViewTab:UIViewController, UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        //  print("inside scroll")
+       
+        if let visibleCells = seriesTabelView.visibleCells as? [SeriesTableViewCell] {
+            for parallaxCell in visibleCells {
+                var yOffset = ((seriesTabelView.contentOffset.y - parallaxCell.frame.origin.y) / imageHeight) * OffsetSpeedTwo
+                parallaxCell.offset(CGPointMake(0.0, yOffset))
+            }
+        }
+    }
+
     
 }

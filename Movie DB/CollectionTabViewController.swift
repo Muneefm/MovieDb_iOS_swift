@@ -8,15 +8,18 @@
 
 import UIKit
 import Alamofire
+let OffsetSpeed: CGFloat = 25.0
 
-class CollectionTabViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class CollectionTabViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
 
     @IBOutlet var collectionView:UICollectionView!
     
     let util = Utils()
+    let ImageHeight: CGFloat = 318.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView.delegate = self
             print("inside view didload third tab")
         makeNetworkRequest()
         // Do any additional setup after loading the view.
@@ -87,6 +90,17 @@ class CollectionTabViewController: UIViewController,UICollectionViewDelegate,UIC
         cell.layer.cornerRadius = 4
 
 return cell
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+      //  print("inside scroll")
+          
+        if let visibleCells = collectionView.visibleCells() as? [MainCollectionViewCell] {
+            for parallaxCell in visibleCells {
+                var yOffset = ((collectionView.contentOffset.y - parallaxCell.frame.origin.y) / ImageHeight) * OffsetSpeed
+                parallaxCell.offset(CGPointMake(0.0, yOffset))
+            }
+        }
     }
     
 

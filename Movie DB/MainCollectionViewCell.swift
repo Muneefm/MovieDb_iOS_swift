@@ -9,12 +9,18 @@
 import UIKit
 import Kingfisher
 
+
 class MainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var nameTitle:UILabel!
     @IBOutlet var posterImage:UIImageView!
-
-    
+    let ImageHeight: CGFloat = 318.0
+    let OffsetSpeed: CGFloat = 25.0
+   var imageOffset:CGPoint!
+    var imageVi:UIImage!
+    func offset(offset: CGPoint) {
+        posterImage.frame = CGRectOffset(self.posterImage.bounds, offset.x, offset.y)
+    }
     
     var mData:JSON?{
         didSet{

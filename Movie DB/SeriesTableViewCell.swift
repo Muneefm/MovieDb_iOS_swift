@@ -27,6 +27,9 @@ class SeriesTableViewCell: UITableViewCell,FloatRatingViewDelegate {
 
         // Configure the view for the selected state
     }
+    func offset(offset: CGPoint) {
+        posterImage.frame = CGRectOffset(self.posterImage.bounds, offset.x, offset.y)
+    }
     
     var populate:JSON?{
         didSet{
