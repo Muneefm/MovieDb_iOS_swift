@@ -13,7 +13,7 @@ class MovieDetailViewController: UIViewController {
 
     @IBOutlet var backDropImage:UIImageView!
     @IBOutlet var posterImage:UIImageView!
-
+    @IBOutlet var titleLabel:UILabel!
     var mId:String = ""
     let util = Utils()
     
@@ -59,6 +59,15 @@ class MovieDetailViewController: UIViewController {
 
         
     }
+    
+    
+    
+    func setData(data:JSON){
+        if data["title"] != nil {
+        self.titleLabel.text = data["title"].string
+        }
+    }
+    
     
     func loadImage(imageView:UIImageView,imageID id:String){
         let posterUrl = util.IMAGE_BASE_URL+id

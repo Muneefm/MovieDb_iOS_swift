@@ -48,12 +48,16 @@ class SeriesTableViewCell: UITableViewCell,FloatRatingViewDelegate {
 
             self.releaseDateLabel.text = "Release Date:- "+(self.populate?["release_date"].string)!
             let util  = Utils()
+            
+            if self.populate?["poster_path"] != nil{
             let posterUrl = util.IMAGE_BASE_URL+(self.populate?["poster_path"].string)!
             let URL = NSURL(string: posterUrl)!
             print("image url got is = "+posterUrl)
             print(URL)
             let imageP = UIImage(named: "movie_set")
             self.posterImage.kf_setImageWithURL(URL,placeholderImage: imageP)
+            }
+            
         }
     }
     
