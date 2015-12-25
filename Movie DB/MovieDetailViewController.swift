@@ -11,6 +11,7 @@ import Alamofire
 import Kingfisher
 class MovieDetailViewController: UIViewController {
 
+    @IBOutlet var navController:UINavigationBar!
     @IBOutlet var backDropImage:UIImageView!
     @IBOutlet var posterImage:UIImageView!
     @IBOutlet var titleLabel:UILabel!
@@ -26,6 +27,10 @@ class MovieDetailViewController: UIViewController {
         posterImage.layer.shadowRadius = 10
         posterImage.layer.shadowOpacity = 1.0
         print("recied id = "+mId)
+        var navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.translucent = true
+      
+       // UINavigationBar(false, animated:true)
         // Do any additional setup after loading the view.
     }
     

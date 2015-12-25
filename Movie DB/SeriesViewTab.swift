@@ -60,6 +60,17 @@ class SeriesViewTab:UIViewController, UITableViewDataSource,UITableViewDelegate{
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print("inside prepare for segue")
+         if let destination = segue.destinationViewController as? MovieDetailViewController {
+        var va = seriesTabelView.indexPathForSelectedRow!.row
+            var ids = self.seriesData![va]
+        print(va)
+            if ids["id"] != nil {
+            destination.mId = String(ids["id"])
+            }
+        }
+      /*  if let index = seriesTabelView.indexPathForSelectedRow!.row {
+         //   destination.blogName = swiftBlogs[blogIndex]
+        }*/
     }
   
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
